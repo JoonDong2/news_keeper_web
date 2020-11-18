@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴스 사이트 모음</title>
+    <style>
+        html, body { margin: 0; height:100%; overflow:hidden }
+        .container{
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navbar {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            white-space:nowrap;
+            overflow:auto;
+            background-color: #f3f3f0;
+            border-width: 1pt 0 1pt 0;
+            border-style: solid;
+            border-color: #ccc;
+            height: 35px;
+            padding-left: 30px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .navbar::-webkit-scrollbar {
+            display: none;
+        }
+        .navbar > a {
+            margin-right: 20px;
+            font-size: 12pt;
+            text-decoration: none;
+            color: #333;
+            padding: 2px 5px 3px;
+        }
+        .navbar > a.active {
+            background-color: #007FFF;
+            color: white
+        }
+        .footer {
+            margin: 0 0 85px 0;
+            word-break:keep-all;
+            font-size: 8pt;
+            color: #666;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #news-container {
+            list-style: none;
+            display: grid;
+            margin: 0 0 20px 0;
+            padding: 0;
+            grid-template-columns: repeat(4, 75px);
+            place-items: center center;
+            gap: 7.5px 10px;
+            white-space:nowrap;
+        }
+        .news-item {
+            text-decoration: none;
+            width: 47pt;
+            height: 17pt;
+            font-size: 14px;
+            border: 1pt solid #757575;
+            padding: 3pt;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center-container">
+            <ul id="news-container">
+            </ul>
+        </div>
+        <div id="navbar" class="navbar">
+            <a href="./?i=0">종합지</a>
+            <a href="./?i=1">방송/통신사</a>
+            <a href="./?i=2">경제지</a>
+            <a href="./?i=3">인터넷/IT지</a>
+            <a href="./?i=4">매거진</a>
+            <a href="./?i=5">전문지</a>
+            <div>&nbsp;&nbsp;&nbsp;</div>
+        </div>
+        <ul class="footer">
+            <li>화면 중간에 움직이는 팝업 광고가 나타나는 사이트는 제외했습니다.</li>
+            <li>사이트 추가 및 삭제를 원하는 관계자는 "프로필 > 문의하기"를 통해서 연락 부탁드립니다.</li>
+        </ul>
+    </div>
+    <script>
+        const news_items = [[
+            {url: "https://www.chosun.com/", src: "./images/0/choosun.png"},
+            {url: "http://m.hani.co.kr/", src: "./images/0/hani.png"},
+            {url: "https://m.hankookilbo.com/", src: "./images/0/hkib.png"},
+            {url: "https://joongang.joins.com/", src: "./images/0/joongang.png"},
+            {url: "http://m.kmib.co.kr/", src: "./images/0/kmib.png"},
+            {url: "http://m.munhwa.com/", src: "./images/0/munwha.png"},
+            {url: "http://m.segye.com/", src: "./images/0/segye.png"},
+            {url: "http://www.seoulilbo.com/", src: "./images/0/seoul.png"},
+        ],[
+            {url: "http://m.ichannela.com/", src: "./images/1/channela.png"},
+            {url: "https://m.wowtv.co.kr/", src: "./images/1/hankooke_conomy.png"},
+            {url: "http://m.jtbc.joins.com/", src: "./images/1/jtbc.png"},
+            {url: "https://news.kbs.co.kr/mobile/main.html", src: "./images/1/kbs.png"},
+            {url: "https://imnews.imbc.com/m_main.html", src: "./images/1/mbc.png"},
+            {url: "https://m.mbn.co.kr/amp-main", src: "./images/1/mbn.png"},
+            {url: "https://m.news1.kr/", src: "./images/1/news1.png"},
+            {url: "https://mobile.newsis.com/", src: "./images/1/newsis.png"},
+            {url: "https://mnews.sbs.co.kr/news/newsMain.do?", src: "./images/1/sbs.png"},
+            {url: "https://cnbc.sbs.co.kr/", src: "./images/1/sbs_cnbc.png"},
+            {url: "http://m.tvchosun.com/home.cstv", src: "./images/1/tvchosun.png"},
+            {url: "https://m.yna.co.kr/", src: "./images/1/yonhap1.png"},
+            {url: "http://m.yonhapnewstv.co.kr/", src: "./images/1/yonhap2.png"},
+            {url: "https://m.ytn.co.kr/", src: "./images/1/ytn.png"},
+        ],[
+            {url: "https://m.mk.co.kr/", src: "./images/2/mk.png"},
+            {url: "https://m.mt.co.kr/renew/", src: "./images/2/mt.png"},
+            {url: "https://m.sedaily.com/", src: "./images/2/seoul.png"},
+            {url: "https://cm.asiae.co.kr/", src: "./images/2/asia.png"},
+            {url: "https://m.edaily.co.kr/amp/", src: "./images/2/edaily.png"},
+            {url: "https://m.biz.chosun.com/", src: "./images/2/chosun_biz.png"},
+            {url: "http://m.joseilbo.com/", src: "./images/2/jose.png"},
+            {url: "https://www.fnnews.com/home", src: "./images/2/fnnews.png"},
+            {url: "https://www.hankyung.com/", src: "./images/2/hankyung.png"},
+        ],[
+            {url: "https://zdnet.co.kr/", src: "./images/3/zdnet.png"},
+            {url: "https://m.nocutnews.co.kr/", src: "./images/3/nocut.png"},
+            {url: "http://m.tf.co.kr/", src: "./images/3/tf.png"},
+            {url: "https://m.dailian.co.kr/", src: "./images/3/dailian.png"},
+            {url: "http://m.ddaily.co.kr/m/", src: "./images/3/dd.png"},
+            {url: "http://m.dt.co.kr/", src: "./images/3/dt.png"},
+            {url: "http://www.bloter.net/", src: "./images/3/bloter.png"},
+            {url: "https://m.etnews.com/", src: "./images/3/junja.png"},
+        ],[
+            {url: "https://m.mk.co.kr/economy/index.php", src: "./images/4/mk.png"},
+            {url: "https://www.sisain.co.kr/", src: "./images/4/sisain.png"},
+            {url: "https://www.sisajournal.com/", src: "./images/4/sisajournal.png"},
+            {url: "https://shindonga.donga.com/", src: "./images/4/shindonga.png"},
+            {url: "http://san.chosun.com/m/", src: "./images/4/san.png"},
+            {url: "https://jmagazine.joins.com/economist", src: "./images/4/economist.png"},
+            {url: "http://m.weekly.khan.co.kr/", src: "./images/4/khan.png"},
+            {url: "https://weekly.donga.com/", src: "./images/4/donga.png"},
+            {url: "http://m.weekly.chosun.com/mobile.asp", src: "./images/4/chosun.png"},
+            {url: "https://mnews.joins.com/sunday", src: "./images/4/joongang.png"},
+            {url: "http://h21.hani.co.kr/", src: "./images/4/hani.png"},
+            {url: "https://magazine.hankyung.com/business", src: "./images/4/hankyung.png"},
+        ],[
+            {url: "http://m.journalist.or.kr/m/", src: "./images/5/journalist.png"},
+            {url: "https://newstapa.org/", src: "./images/5/tapa.png"},
+            {url: "http://m.dongascience.donga.com/", src: "./images/5/donga.png"},
+            {url: "https://www.womennews.co.kr/", src: "./images/5/women.png"},
+            {url: "http://m.ildaro.com/", src: "./images/5/ilda.png"},
+            {url: "http://m.newscham.net/", src: "./images/5/cham.png"},
+            {url: "https://koreajoongangdaily.joins.com/", src: "./images/5/joongang.png"},
+            {url: "http://m.koreaherald.com/", src: "./images/5/herald.png"},
+            {url: "http://kormedi.com/", src: "./images/5/kormedi.png"},
+            {url: "http://m.health.chosun.com/", src: "./images/5/health_chosun.png"},
+        ]]
+        const navbar = document.getElementById("navbar")
+        const menu_items = document.querySelectorAll(".navbar > a");
+        const news_container = document.getElementById("news-container");
+        const index = Number(location.href.split("?i=")[1]) || 0
+        menu_items[index].classList.add("active")
+        news_items[index].forEach(item => {
+            const li = document.createElement('li')
+            li.innerHTML = `<a href="${item.url}"><img class="news-item" src="${item.src}"/></a>`
+            news_container.appendChild(li)
+        })
+        const offsetIndex = (index - 1) < 0 ? 0 : (index - 1)
+        navbar.scrollLeft = offsetIndex * 65;
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "new_keeper_web",
+  "version": "1.0.0",
+  "description": "뉴스 사이트 모음",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoonDong2/news_keeper_web.git"
+  },
+  "keywords": [
+    "news",
+    "keeper"
+  ],
+  "author": "Joondong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoonDong2/news_keeper_web/issues"
+  },
+  "homepage": "https://github.com/JoonDong2/news_keeper_web#readme"
+}
