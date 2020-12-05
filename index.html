@@ -301,13 +301,16 @@
                     const ins = document.createElement('ins')
                     ins.classList.add('adsbygoogle')
                     ins.style = "display:inline-block;width:728px;height:90px"
-                    ins["data-ad-client"] = "ca-pub-5801196273760006"
-                    ins["data-ad-slot"] = "9663764699"
-                    list.appendChild(ad)
+                    ins.dataset["ad-client"] = "ca-pub-5801196273760006"
+                    ins.dataset["ad-slot"] = "9663764699"
+                    container.appendChild(ad)
                 }
 
                 news_list.appendChild(container)
 
+                setTimeout(() => {
+                    window.scrollTo(0, 300)
+                }, 500)
                 
             }
             
