@@ -99,7 +99,7 @@
 <body>
     
     <div class="container">
-        <div id="top-ad" style="margin-bottom: 10px;">
+        <div style="margin-bottom: 10px;">
             <ins class="adsbygoogle"
                 style="display:block"
                 data-ad-client="ca-pub-5801196273760006"
@@ -113,16 +113,6 @@
             <div id="news-list"></div>
             <ul id="news-container">
             </ul>
-        </div>
-
-        <div id="bottom-ad" style="margin-bottom: 10px;">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-5801196273760006"
-                data-ad-slot="6642865598"
-                data-ad-format="auto"
-                data-full-width-responsive="true">
-            </ins>
         </div>
 
         <div id="navbar" class="navbar">
@@ -303,8 +293,6 @@
         const navbar = document.getElementById("navbar")
         const menu_items = document.querySelectorAll(".navbar > a");
         
-        const top_ad = document.getElementById("top-ad");
-        const bottom_ad = document.getElementById("bottom-ad");
         const news_container = document.getElementById("news-container");
         const news_list = document.getElementById("news-list");
 
@@ -315,14 +303,12 @@
         news_items[index].forEach(item => {
             if(item.type === "item") {
                 news_list.style="display:none;"
-                bottom_ad.style="display: none;"
                 const li = document.createElement('li')
                 li.innerHTML = `<a href="${item.url}"><img class="news-item" src="${item.src}"/></a>`
                 news_container.appendChild(li)
             }
             else { // type:array
                 news_container.style="display: none;"
-                top_ad.style="display: none;"
 
                 const container = document.createElement('div')
                 container.style = "display: flex; flex-direction: column; align-items: center;"
