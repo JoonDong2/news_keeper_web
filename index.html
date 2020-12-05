@@ -5,16 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>뉴스 사이트 모음</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
-         data-ad-layout="in-article"
-         data-ad-format="fluid"
-         data-ad-client="ca-pub-5801196273760006"
-         data-ad-slot="7713238830"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
     <style>
         html, body { margin: 0; width: 100%; height: 100%; scroll-behavior: auto; }
         .container{
@@ -104,16 +94,37 @@
             object-fit: contain;
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 </head>
 <body>
     
     <div class="container">
+        <div id="top-ad" style="margin-bottom: 10px;">
+            <amp-ad width="100vw" height="320"
+                type="adsense"
+                data-ad-client="ca-pub-5801196273760006"
+                data-ad-slot="9663764699"
+                data-auto-format="rspv"
+                data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>
+        </div>
 
         <div class="center-container">
             <div id="news-list"></div>
             <ul id="news-container">
             </ul>
+        </div>
+
+        <div id="bottom-ad" style="margin-bottom: 10px;">
+            <amp-ad width="100vw" height="320"
+                type="adsense"
+                data-ad-client="ca-pub-5801196273760006"
+                data-ad-slot="6642865598"
+                data-auto-format="rspv"
+                data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>
         </div>
 
         <div id="navbar" class="navbar">
@@ -264,7 +275,9 @@
         ]]
         const navbar = document.getElementById("navbar")
         const menu_items = document.querySelectorAll(".navbar > a");
-    
+        
+        const top_ad = document.getElementById("top-ad");
+        const bottom_ad = document.getElementById("bottom-ad");
         const news_container = document.getElementById("news-container");
         const news_list = document.getElementById("news-list");
 
@@ -275,12 +288,14 @@
         news_items[index].forEach(item => {
             if(item.type === "item") {
                 news_list.style="display:none;"
+                bottom_ad.style="display: none;"
                 const li = document.createElement('li')
                 li.innerHTML = `<a href="${item.url}"><img class="news-item" src="${item.src}"/></a>`
                 news_container.appendChild(li)
             }
             else { // type:array
                 news_container.style="display: none;"
+                top_ad.style="display: none;"
 
                 const container = document.createElement('div')
                 container.style = "display: flex; flex-direction: column; align-items: center;"
@@ -311,6 +326,9 @@
         })
         const offsetIndex = (index - 1) < 0 ? 0 : (index - 1)
         navbar.scrollLeft = offsetIndex * 65;
+    </script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </body>
 </html>
