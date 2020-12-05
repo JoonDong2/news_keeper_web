@@ -99,7 +99,7 @@
 <body>
     
     <div class="container">
-        <div style="margin-bottom: 10px;">
+        <div id="top_ad" style="margin-bottom: 10px;">
             <ins class="adsbygoogle"
                 style="display:inline-block;width:728px;height:90px"
                 data-ad-client="ca-pub-5801196273760006"
@@ -112,6 +112,15 @@
             <ul id="news-container">
             </ul>
         </div>
+
+        <div id="bottom_ad" style="margin-bottom: 10px;">
+            <ins class="adsbygoogle"
+                style="display:inline-block;width:728px;height:90px"
+                data-ad-client="ca-pub-5801196273760006"
+                data-ad-slot="9663764699">
+            </ins>
+        </div>
+
         <div id="navbar" class="navbar">
             <a href="./?i=0">종합지</a>
             <a href="./?i=1">포털</a>
@@ -261,21 +270,27 @@
         const navbar = document.getElementById("navbar")
         const menu_items = document.querySelectorAll(".navbar > a");
         
+        const top_ad = document.getElementById("top-ad");
+        const bottom_ad = document.getElementById("bottom-ad");
         const news_container = document.getElementById("news-container");
         const news_list = document.getElementById("news-list");
 
         const index = Number(location.href.split("?i=")[1]) || 0
         
         menu_items[index].classList.add("active")
+
         news_items[index].forEach(item => {
             if(item.type === "item") {
                 news_list.style="display:none;"
+                bottom_ad.style="display: none;"
                 const li = document.createElement('li')
                 li.innerHTML = `<a href="${item.url}"><img class="news-item" src="${item.src}"/></a>`
                 news_container.appendChild(li)
             }
             else { // type:array
                 news_container.style="display: none;"
+                top_ad.style="display: none;"
+
                 const container = document.createElement('div')
                 container.style = "display: flex; flex-direction: column; align-items: center;"
 
@@ -295,18 +310,11 @@
                 
                 container.appendChild(list)
 
-                if(index !== 0 && index % 2 === 0) {
-                    const ad = document.createElement('div')
-                    ad.style = "margin-bottom: 10px;"
-                    ad.innerHTML = `<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5801196273760006" data-ad-slot="9663764699"></ins>`
-                }
-
                 news_list.appendChild(container)
 
                 setTimeout(() => {
                     window.scrollTo(0, 300)
                 }, 500)
-                
             }
             
         })
