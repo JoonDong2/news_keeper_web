@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>뉴스 사이트 모음</title>
     <style>
-        html, body { margin: 0; height:100%; overflow:hidden }
+        html, body { margin: 0; width: 100%; height: 100%; scroll-behavior: auto; }
         .container{
             flex-direction: column;
-            height: 100%;
             width: 100%;
+            min-height: 100%;
             display: flex;
             justify-content: flex-end;
         }
@@ -53,6 +53,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 10pt;
         }
         #news-container {
             list-style: none;
@@ -67,9 +68,9 @@
         #news-list {
             flex: 1;
             list-style: none;
+            margin: 0 0 10px 0;
             padding: 0;
             white-space:nowrap;
-            margin-bottom: 10px;
         }
         .news-list {
             list-style: none;
@@ -178,18 +179,59 @@
             {url: "http://www.bloter.net/", src: "./images/4/bloter.png", type: "item"},
             {url: "https://m.etnews.com/", src: "./images/4/junja.png", type: "item"},
         ],[
-            {type: "array", name: "부산 · 울산 · 경산", items: [
-                {url: "http://www.kookje.co.kr/mobile/", src: "./images/5/kookje.png", type: "item"},
-                {url: "http://mobile.busan.com/", src: "./images/5/busan.png", type: "item"},
-                {url: "http://www.ksilbo.co.kr/", src: "./images/5/kyungsang.png", type: "item"},
-                {url: "http://m.knnews.co.kr/", src: "./images/5/kyungnam.png", type: "item"},
+            {type: "array", name: "제주", items: [
+                {url: "http://www.jemin.com/", src: "./images/5/jemin.png", type: "item"},
+                {url: "http://m.jejupress.co.kr/index.html", src: "./images/5/jeju1.png", type: "item"},
+                {url: "http://www.jejunews.com/", src: "./images/5/jeju2.png", type: "item"},
+            ]},
+            {type: "array", name: "광주", items: [
+                {url: "http://m.kwangju.co.kr/", src: "./images/5/kwangju1.png", type: "item"},
+                {url: "http://m.kjdaily.com/", src: "./images/5/kwangju2.png", type: "item"},
+                {url: "http://m.namdonews.com/index.html", src: "./images/5/namdo.png", type: "item"},
+                {url: "http://m.honam.co.kr/", src: "./images/5/mudeung.png", type: "item"},
+            ]},
+            {type: "array", name: "전북", items: [
+                {url: "https://www.jjan.kr/", src: "./images/5/jeonbuk1.png", type: "item"},
+                {url: "http://m.jeollailbo.com/index.html", src: "./images/5/jeonla.png", type: "item"},
+                {url: "https://www.domin.co.kr/", src: "./images/5/jeonbuk2.png", type: "item"},
+                {url: "http://www.sjbnews.com/", src: "./images/5/jeonbuk3.png", type: "item"},
+            ]},
+            {type: "array", name: "대구 · 경북", items: [
+                {url: "http://m.daejonilbo.com/", src: "./images/5/daejeon.png", type: "item"},
+                {url: "http://mnews.imaeil.com/", src: "./images/5/mail.png", type: "item"},
+                {url: "https://m.yeongnam.com/index.php?", src: "./images/5/yeongnam.png", type: "item"},
+                {url: "https://www.hidomin.com/", src: "./images/5/kyungbuk.png", type: "item"},
+            ]},
+            {type: "array", name: "대전", items: [
+                {url: "http://m.daejonilbo.com/", src: "./images/5/daejeon.png", type: "item"},
+                {url: "http://m.joongdo.co.kr/", src: "./images/5/joongdo.png", type: "item"},
+                {url: "https://www.cctoday.co.kr/", src: "./images/5/cc1.png", type: "item"},
+                {url: "http://www.dailycc.net/", src: "./images/5/cc2.png", type: "item"},
+            ]},
+            {type: "array", name: "충북 · 강원", items: [
+                {url: "http://m.kwnews.co.kr/", src: "./images/5/kangwon.png", type: "item"},
+                {url: "http://news.chungbuk.go.kr/", src: "./images/5/chungbuk2.png", type: "item"},
+                {url: "https://www.cbnews.kr/", src: "./images/5/chungbuk1.png", type: "item"},
+                {url: "http://www.jcnews.co.kr/", src: "./images/5/jecheon.png", type: "item"},
+            ]},
+            {type: "array", name: "인천", items: [
+                {url: "http://m.kyeongin.com/", src: "./images/5/kyungin.png", type: "item"},
+                {url: "https://www.kihoilbo.co.kr/", src: "./images/5/kiho.png", type: "item"},
+                {url: "http://m.incheonnewspaper.com/index.html", src: "./images/5/incheon1.png", type: "item"},
+                {url: "http://www.incheonilbo.com/", src: "./images/5/incheon2.png", type: "item"},
             ]},
             {type: "array", name: "경기", items: [
                 {url: "https://www.kgnews.co.kr/mobile/", src: "./images/5/kyungki1.png", type: "item"},
                 {url: "http://www.suwonilbo.kr/", src: "./images/5/suwon.png", type: "item"},
                 {url: "http://www.kyeonggi.com/", src: "./images/5/kyungki2.png", type: "item"},
                 {url: "http://www.joongboo.com/", src: "./images/5/joongbu.png", type: "item"},
-            ]}
+            ]},
+            {type: "array", name: "부산 · 울산 · 경산", items: [
+                {url: "http://www.kookje.co.kr/mobile/", src: "./images/5/kookje.png", type: "item"},
+                {url: "http://mobile.busan.com/", src: "./images/5/busan.png", type: "item"},
+                {url: "http://www.ksilbo.co.kr/", src: "./images/5/kyungsang.png", type: "item"},
+                {url: "http://m.knnews.co.kr/", src: "./images/5/kyungnam.png", type: "item"},
+            ]},
         ],
         [
             {url: "https://m.mk.co.kr/economy/index.php", src: "./images/7/mk.png", type: "item"},
@@ -235,23 +277,37 @@
             else { // type:array
                 news_container.style="display: none;"
                 const container = document.createElement('div')
-                container.style = "display: flex; flex-direction: column; justify-content: center; align-items: center;"
+                container.style = "display: flex; flex-direction: column; align-items: center;"
 
                 const list = document.createElement('div')
                 list.classList.add("news-list")
 
                 const name = document.createElement('div')
-                name.style="margin-bottom: 3pt; width: 100%; padding-left: 35pt;"
+                name.style="margin-bottom: 3pt; align-self: flex-start; margin-left: 17pt; font-weight: bold; color: #333;"
                 name.innerHTML = item.name
 
                 container.appendChild(name)
-                container.appendChild(list)
                 item.items.forEach(inner_item => {
                     const li = document.createElement('li')
                     li.innerHTML = `<a href="${inner_item.url}"><img class="news-item" src="${inner_item.src}"/></a>`
                     list.appendChild(li)
-                })
+                })           
+                
+                container.appendChild(list)
+
+                if(index !== 0 && index % 2 === 0) {
+                    const ad = document.createElement('div')
+                    ad.innerHTML = `<ins class="adsbygoogle"
+                                        style="display:inline-block;width:728px;height:90px"
+                                        data-ad-client="ca-pub-5801196273760006"
+                                        data-ad-slot="9663764699">
+                                    </ins>`
+                    container.appendChild(ad)
+                }
+
                 news_list.appendChild(container)
+
+                
             }
             
         })
