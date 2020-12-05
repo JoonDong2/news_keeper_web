@@ -298,12 +298,7 @@
                 if(index !== 0 && index % 2 === 0) {
                     const ad = document.createElement('div')
                     ad.style = "margin-bottom: 10px;"
-                    const ins = document.createElement('ins')
-                    ins.classList.add('adsbygoogle')
-                    ins.style = "display:inline-block;width:728px;height:90px"
-                    ins.dataset["ad-client"] = "ca-pub-5801196273760006"
-                    ins.dataset["ad-slot"] = "9663764699"
-                    container.appendChild(ad)
+                    ad.innerHTML = `<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5801196273760006" data-ad-slot="9663764699"></ins>`
                 }
 
                 news_list.appendChild(container)
