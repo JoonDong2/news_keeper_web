@@ -64,13 +64,11 @@
             list-style: none;
             margin: 0 0 20px 0;
             padding: 0;
-            display: grid;
+            /* display: grid;
             grid-template-columns: 75px 75px 75px 75px;
-            place-items: center center;
-            display: -webkit-grid;
-            -webkit-grid-template-columns: 75px 75px 75px 75px;
-            -webkit-place-items: center center;
-            -webkit-gap: 7.5px 10px;
+            place-items: center center; */
+            width: 300px;
+            margin: 0 auto;
             white-space:nowrap;
         }
         #news-list {
@@ -91,12 +89,16 @@
             white-space:nowrap;
         }
         .news-item {
+            float: left;
             text-decoration: none;
-            width: 47pt;
+            width: 60px;
             height: 17pt;
             font-size: 14px;
-            border: 1pt solid #757575;
-            padding: 3pt;
+            border: 1px solid #757575;
+            padding: 1.5px;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-bottom: 7.5px;
             overflow: hidden;
             text-overflow:ellipsis;
             object-fit: contain;
