@@ -133,9 +133,7 @@
         </ul>
     </div>
     <script>
-        "use strict";
-
-const news_items = [[{
+var news_items = [[{
   url: "https://www.chosun.com/",
   src: "./images/0/choosun.png",
   type: "item"
@@ -680,39 +678,39 @@ const news_items = [[{
   src: "./images/8/health_chosun.png",
   type: "item"
 }]];
-const navbar = document.getElementById("navbar");
-const menu_items = document.querySelectorAll(".navbar > a");
-const news_container = document.getElementById("news-container");
-const news_list = document.getElementById("news-list");
-const index = Number(location.href.split("?i=")[1]) || 0;
+var navbar = document.getElementById("navbar");
+var menu_items = document.querySelectorAll(".navbar > a");
+var news_container = document.getElementById("news-container");
+var news_list = document.getElementById("news-list");
+var index = Number(location.href.split("?i=")[1]) || 0;
 menu_items[index].classList.add("active");
-news_items[index].forEach(item => {
+news_items[index].forEach(function (item) {
   if (item.type === "item") {
     news_list.style = "display:none;";
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="${item.url}"><img class="news-item" src="${item.src}"/></a>`;
+    var li = document.createElement('li');
+    li.innerHTML = "<a href=\"".concat(item.url, "\"><img class=\"news-item\" src=\"").concat(item.src, "\"/></a>");
     news_container.appendChild(li);
   } else {
     // type:array
     news_container.style = "display: none;";
-    const container = document.createElement('div');
+    var container = document.createElement('div');
     container.style = "display: flex; flex-direction: column; align-items: center;";
-    const list = document.createElement('div');
+    var list = document.createElement('div');
     list.classList.add("news-list");
-    const name = document.createElement('div');
+    var name = document.createElement('div');
     name.style = "margin-bottom: 3pt; align-self: flex-start; margin-left: 17pt; font-weight: bold; color: #333;";
     name.innerHTML = item.name;
     container.appendChild(name);
-    item.items.forEach(inner_item => {
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${inner_item.url}"><img class="news-item" src="${inner_item.src}"/></a>`;
+    item.items.forEach(function (inner_item) {
+      var li = document.createElement('li');
+      li.innerHTML = "<a href=\"".concat(inner_item.url, "\"><img class=\"news-item\" src=\"").concat(inner_item.src, "\"/></a>");
       list.appendChild(li);
     });
     container.appendChild(list);
     news_list.appendChild(container);
   }
 });
-const offsetIndex = index - 1 < 0 ? 0 : index - 1;
+var offsetIndex = index - 1 < 0 ? 0 : index - 1;
 navbar.scrollLeft = offsetIndex * 65;
     </script>
     <script>
