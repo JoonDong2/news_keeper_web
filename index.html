@@ -68,20 +68,20 @@
             white-space:nowrap;
         }
         #news-list {
-            flex: 1;
             list-style: none;
             margin: 0 0 10px 0;
             padding: 0;
-            white-space:nowrap;
         }
         .news-list {
+            display: block;
             list-style: none;
-            display: grid;
-            margin: 0 0 10px 0;
             padding: 0;
+            /* display: grid;
             grid-template-columns: 75px 75px 75px 75px;
-            place-items: center center;
-            gap: 7.5px 10px;
+            place-items: center center; */
+            width: 300px;
+            height: 17pt;
+            margin: 0 auto 15px;
             white-space:nowrap;
         }
         .news-item {
@@ -697,11 +697,10 @@ news_items[index].forEach(function (item) {
     // type:array
     news_container.style = "display: none;";
     var container = document.createElement('div');
-    container.style = "display: flex; flex-direction: column; align-items: center;";
     var list = document.createElement('div');
     list.classList.add("news-list");
     var name = document.createElement('div');
-    name.style = "margin-bottom: 3pt; align-self: flex-start; margin-left: 17pt; font-weight: bold; color: #333;";
+    name.style = "margin-bottom: 3pt; margin-left: 17pt; font-weight: bold; color: #333;";
     name.innerHTML = item.name;
     container.appendChild(name);
     item.items.forEach(function (inner_item) {
