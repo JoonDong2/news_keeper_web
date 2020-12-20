@@ -99,6 +99,21 @@
             text-overflow:ellipsis;
             object-fit: contain;
         }
+        .news-item2 {
+            float: left;
+            text-decoration: none;
+            width: 52.5pt;
+            height: 17pt;
+            font-size: 14px;
+            border: 1pt solid #757575;
+            padding: 1.5pt;
+            margin-right: 2.85pt;
+            margin-left: 2.85px;
+            margin-bottom: 7.5px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            object-fit: contain;
+        }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -710,7 +725,7 @@ news_items[index].forEach(function (item) {
     container.appendChild(name);
     item.items.forEach(function (inner_item) {
       var li = document.createElement('li');
-      li.innerHTML = "<a href=\"".concat(inner_item.url, "\"><img class=\"news-item\" src=\"").concat(inner_item.src, "\"/></a>");
+      li.innerHTML = "<a href=\"".concat(inner_item.url, "\"><img class=\"news-item2\" src=\"").concat(inner_item.src, "\"/></a>");
       list.appendChild(li);
     });
     container.appendChild(list);
