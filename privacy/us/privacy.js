@@ -1,125 +1,120 @@
 var Privacy = `
-## 1. 개인정보취급방침을 공유하는 이유
-당사는 News Keeper가 어떤 데이터를 수집하고 수집한 데이터를 어떻게 사용하는지에 대해 귀하가 항상 숙지하고 이 모두에 대해 실질적인 통제력을 가져야 한다고 생각합니다. 당사는 귀하가 당사와 공유하는 정보에 대해 최선의 결정을 내릴 수 있도록 권한을 부여하고자 합니다.
+## 1. Reasons for sharing the privacy policy
+We believe that you should always be aware of what data News Keeper collects and how it uses the data it collects, and that you have practical control over all of this. We want to empower you to make the best decisions about the information you share with us.
 
-## 2. 당사와 공유하는 정보
+## 2. Information shared with us
+We need certain information to provide services to you. For example, you must have an account to share content on News Keeper. If you choose to share the information below with us, we collect and use it to operate our services.
 
-당사는 귀하에 대한 서비스 제공을 위해 특정 정보를 필요로 합니다. 예를 들어, 귀하가 News Keeper에 콘텐츠를 공유하려면 계정이 있어야 합니다. 귀하가 아래 정보를 당사와 공유하기로 선택하면 당사는 당사의 서비스 운영을 위해 이를 수집, 이용합니다.
+> **Basic account information**
 
-> **기본 계정정보**
-   
-   News Keeper에서 다른 이용자가 공유한 스크랩을 확인하는 등 일부 서비스 기능의 이용을 위해서는 계정을 만들 필요가 없습니다. 
-   
-   **회원가입은 구글 또는 카카오같은 소셜 인증업체를 통해 얻은 정보로만 진행됩니다.** 귀하는 소셜 인증업체에 등록된 자신의 **고유번호, 이름, 프로필 사진** 정보를 제공해야 합니다.
+You do not need to create an account in order to use some service features, such as checking clippings shared by other users in News Keeper.
 
-   News Keeper에 등록된 귀하의 정보는 로그인할 때마다 인증업체와 동기화됩니다.
+Membership registration proceeds only with information obtained through social authentication companies such as Google or Kakao. You must provide your identification number, name and profile picture information registered with the social authenticator.
 
-   귀하의 이름과 사진은 항상 공개되지만, 이용자는 실명이나 가명을 사용할 수 있습니다.
+Your information registered with News Keeper is synchronized with the authenticator each time you log in.
 
-> **공개 정보**
+Your name and photo are always public, but users can use their real name or pseudonym.
 
-   귀하가 News Keeper에 회원가입할 때 제공한 정보중 이름, 사진이 다른 이용자에게 공개됩니다.
-   
-   귀하가 News Keeper에서 설정한 채널 소개 텍스트가 다른 이용자에게 공개됩니다.
-   
-   귀하가 News Keeper에서 직접 공유를 설정한 특정 인터넷 페이지에 대한 텍스트(스크랩)가 다른 이용자에게 공개됩니다. 스크랩을 저장할 때, 또는 스크랩 상세 페이지에서 "공유" 버튼을 활성화(파란색 배경 표시)시킴으로써 공유할 수 있습니다. 이 경우 귀하가 직접 설정한 카테고리와 해당 인터넷 페이지의 메타 태그에서 추출한 페이지의 제목, 요약 내용, 대표 이미지를 포함한 직접 링크가 함께 공유됩니다.
-   
-   귀하가 다른 이용자가 공유한 텍스트에 대한 활동(예: 좋아요/싫어요, 댓글)이 공유됩니다.
+> **Public information**
 
-> **쪽지 및 비공개 소통**
-   
-   당사는 귀하가 조금 더 개인적으로 소통하거나 누가 귀하의 콘텐츠를 볼지를 통제할 수 있게 해주는 특정 기능을 제공합니다. 예를 들어, News Keeper에서 비공개 대화를 나누기 위해 쪽지 기능을 사용할 수 있습니다. 귀하가 쪽지를 보내거나 받음으로써 다른 사람들과 소통할 때, 당사는 귀하의 소통 내용 및 관련 정보를 저장하고 처리합니다.
-   
-   당사는 귀하의 쪽지 내용을 해당 쪽지의 수신자와 공유하며, 귀하에게 광고를 게재하는데 쪽지를 사용하지 않습니다. 
+   Among the information you provided when signing up for News Keeper, your name and photo will be disclosed to other users.
 
-   쪽지와 같은 기능을 사용하여 소통하는 경우, 귀하가 자신의 계정에서 이러한 쪽지 사본을 삭제하더라도 수신자의 News Keeper에 귀하의 소통 내용의 사본을 보유하고, 따라서 해당 내용이 복제, 보관되거나 다시 공유될 수 있음을 잊지 마십시오.
+   Channel introductory text that you have set up in News Keeper is made public to other users.
 
-> **당사와 공유하는 정보에 대한 통제 방법**
-   
-   귀하는 다음 사항을 결정할 수 있습니다.
+   Text (clippings) for certain Internet pages that you have set up to share directly in News Keeper are disclosed to other users. You can share the clipping when saving it, or by activating the "Share" button on the clipping detail page (shown with a blue background). In this case, the category you set yourself and a direct link including the title, summary and representative image of the page extracted from the meta tag of that Internet page will be shared.
 
-   * 특정 인터넷 페이지에 대한 텍스트를 다른 이용자에게 공개할 것인지 여부
-   * 다른 이용자에게 공개되는 채널 소개 텍스트
-   
-   귀하는 구글, 카카오 등 소셜 인증업체를 통해 다음 정보를 변경할 수 있습니다. 변경된 정보는 다시 로그인했을 때 인증업체와 동기화됩니다.
-   
-   * 이름
-   * 사진
+   Your activities on texts shared by other users (e.g. like/dislike, comment) are shared.
 
-## 3. 당사가 수령하는 귀하에 관한 추가 정보
+> **Direct messages and private communication**
 
-당사는 귀하가 당사의 서비스 또는 당사의 콘텐츠가 포함된 기타 웹사이트 또는 모바일 앱을 사용할 때 광고주를 포함한 제3자로부터 특정 정보를 수집합니다. 귀하가 당사와 공유하는 정보와 마찬가지로, 당사는 아래의 데이터를 사용하여 서비스를 운영합니다.
+   We provide specific features that allow you to communicate more personally or control who will view your content. For example, in News Keeper, you can use the Direct Message feature to have a private conversation. When you communicate with others by sending or receiving direct messages, we store and process your communication and related information.
 
-> **키워드**
+   We share your message content with the recipients of the message, and we do not use the message to display advertisements to you.
 
-귀하가 **저장하거나 좋아요 또는 싫어요를 표시한 스크랩**에서 해당 스크랩과 연결된 특정 인터넷 페이지의 메타 데이터에서 추출한 **페이지의 제목, 내용 요약에서 추출한 키워드**가 귀하에게 가장 적합한 **광고를 게재하는데 사용됩니다.**
+   If you communicate using features such as Direct Messages, even if you delete a copy of these Direct Messages from your account, we will retain a copy of your communication in the recipient's News Keeper, so the content may be duplicated, archived or shared again. Do not forget that there is.
 
-키워드 정보는 당사의 서비스에서 광고를 담당하는 제3의 서비스 업체와 공유될 수 있습니다. 대표적인 예로 '구글 애드몹'이 있습니다.
+> **How to control the information you share with us**
 
-**귀하가 스크랩을 저장할 때 입력한 텍스트는 포함되지 않습니다.**
-   
-## 4. 당사가 공유하고 공개하는 정보
-   
-위에서 언급한 바와 같이, News Keeper는 귀하가 당사의 서비스를 통해 공개적으로 공유하는 정보를 광범위하고 즉각적으로 유통시키도록 설계되었습니다. 당사가 귀하의 사적인 개인 데이터를 공개하는 일부의 경우, 당사는 귀하의 통제 하에 공개를 실행합니다. 그렇게 하는 것이 당사의 서비스 운영을 위해서 중요하거나 법으로 요구되기 때문입니다.
+   You can decide:
 
-> **스크랩**
-   
-귀하가 공유한 스크랩은 서버에 업로드되고, 다른 이용자들이 해당 스크랩을 확인할 수 있습니다.
+   * Whether to disclose text for a specific Internet page to other users
+   * Channel introductory text to be disclosed to other users
 
-> **키워드**
+   You can change the following information through social authentication companies such as Google and Kakao. Changed information is synchronized with the authenticator when you log in again.
 
-귀하가 **저장하거나 좋아요 또는 싫어요를 표시한 스크랩**에서 해당 스크랩과 연결된 특정 인터넷 페이지의 메타 데이터에서 추출한 **페이지의 제목, 내용 요약에서 추출한 키워드**가 News Keeper의 광고를 처리하는 **'구글 애드몹'에 전달됩니다.** 키워드는 '구글 애드몹'에서 귀하에게 가장 적합한 **광고를 게재하는데 사용됩니다.**
+   * name
+   * Photo
+   * 
+## 3. Additional information about you we receive
+We collect certain information from third parties, including advertisers, when you use our services or other websites or mobile apps that contain our content. Like the information you share with us, we use the data below to operate our services.
 
-**귀하가 스크랩을 저장할 때 입력한 텍스트는 포함되지 않습니다.**
+> **keyword**
 
-> **법, 손해 및 공익**
-   
-본 개인정보처리방침 또는 당사가 귀하에게 다른 방식으로 제공할 수 있는 통제와 상반되는 내용이 있을지라도, 당사는 법, 규정, 법적 절차 또는 정부 요청에 따르기 위해, 개인의 안전을 보호하기 위해, 당사의 플랫폼의 안전 또는 무결성을 보호하기 위해(당사의 서비스에서 스팸, 악용 또는 악의적인 행위자를 방지하는 것을 지원하고, 당사의 서비스에서 콘텐츠 또는 계정을 삭제한 이유를 설명하기 위한 경우 포함8, 사기, 보안 또는 기술적 문제를 해결하기 위해, 또는 당사의 권리 또는 재산 또는 당사의 서비스 이용자의 권리 또는 재산을 보호하기 위해 합리적으로 필요하다고 판단된다면, 귀하의 개인 정보 및 기타 안전 관련 정보를 보존, 사용, 공유하거나 공개할 수 있습니다.
+Keywords extracted from the title and content summary of the page, extracted from the metadata of the specific Internet page associated with the clipping from the clippings you have saved or liked or disliked will be used to serve you the best ad.
 
-> **계열사 및 소유권 변경**
-   
-당사가 파산, 합병, 인수, 구조 조정 또는 자산매각에 관련될 경우 귀하의 개인 데이터는 해당 거래의 일환으로 매각 또는 양도될 수 있습니다. 본 개인정보처리방침은 새로운 사업체에 이전되는 귀하의 개인 데이터에 적용됩니다. 또한 당사는 광고 게재를 포함하여 당사의 서비스와 계열사의 서비스의 운영 지원을 위해 귀하에 관한 정보를 당사의 법인 계열사에게 공개할 수 있습니다.
+Keyword information may be shared with third-party service providers responsible for advertising on our services. A typical example is'Google Admob'.
 
-## 5. 당사와 함께 귀하의 개인 정보 관리하기
-   
-귀하는 당사와 공유하는 개인 데이터를 통제합니다. 귀하는 이러한 데이터에 언제든지 접근하거나 정정할 수 있습니다. 귀하의 계정을 비활성화할 수도 있습니다. 당사는 또한 귀하가 News Keeper에 제공한 데이터의 사용에 대해 일정한 경우 귀하에게 이의를 제기하거나, 제한하거나, 동의를 철회할 수 있는 도구를 제공합니다. 또한 당사는 귀하가 당사의 서비스를 통해 공유한 데이터를 이동할 수 있게 하고, 당사에 쉽게 접촉할 수 있는 방법을 제공합니다. 귀하의 프라이버시를 보호하고 보안을 유지하기 위해, 당사는 귀하에게 귀하의 개인정보에 대한 접근을 허용하거나 귀하의 개인정보 삭제, 이동 및 기타 관련 요청에 응하기에 앞서 귀하의 신원을 확인하기 위한 절차들을 따르고 있습니다.
-   
-> **스크랩 공유 및 공유 해제**
-   
-귀하가 스크랩을 저장할 때 또는 스크랩 상세 페이지에서 "공유" 버튼을 활성화(파란색 배경 표시) 시키면, 해당 스크랩이 서버에 업로드되면서 다른 이용자들이 해당 스크랩을 확인할 수 있습니다. 해당 스크랩이 서버에 업로드되면, 스크랩 리스트에서 해당 스크랩의 카테고리 배경색이 파란색으로 변경됩니다.
+The text you entered when saving the clipping is not included.
 
-귀하가 스크랩을 저장할 때 "공유" 버튼을 비활성화(회색 배경 표시) 시키면, 해당 스크랩은 귀하의 단말기에만 저장되고, 다른 이용자들은 해당 스크랩을 확인할 수 없습니다.
+## 4. Information we share and disclose
+As mentioned above, News Keeper is designed to distribute the information you publicly share through our services in a broad and immediate way. In some cases where we disclose your private personal data, we do so under your control. Because doing so is important or required by law for the operation of our services.
 
-귀하가 스크랩을 상세 페이지에서 "공유" 버튼을 비활성화(회색 배경 표시) 시키면, 해당 스크랩이 서버에서 삭제되면서 다른 이용자들이 해당 스크랩을 더 이상 확인할 수 없게 됩니다. 이 경우 스크랩 리스트에서 해당 스크랩의 카테고리의 배경색이 파란색에서 회식으로 변경됩니다. 만약 변경되지 않는다면, 서버에서 삭제되지 않은 경우이므로 계속해서 이러한 문제가 발생한다면 "프로필 > 문의하기"를 통해서 News Keeper 관리자에게 삭제를 요청해 주십시오.
+> **clipping**
 
-**단, 법률의 요청이 있는 경우 당사는 서버에 업로드된 스크랩의 사본을 저장할 수 있습니다.**
+The clippings you have shared are uploaded to the server, and other users can check the clippings.
 
-> **개인정보 변경**
+> **keyword**
 
-News Keeper는 구글 또는 카카오 등 인증업체에 등록된 귀하의 고유번호, 이름, 이메일, 사진 정보만을 통해서 회원가입을 진행하며, 추가 정보는 받지 않습니다. 따라서 해당 정보를 변경하기 위해서는 해당 인증업체에서 정한 방식으로 변경해야 하며, 변경된 정보는 다시 로그인할 때 동기화됩니다. 
-   
-채널 소개 텍스트는 프로필에서 "채널을 소개해 보세요"(채널 소개 텍스트가 없는 경우) 또는 기존의 채널 소개 텍스트를 터치하여 변경할 수 있습니다.
-   
-> **회원 탈퇴**
+From the clippings you have saved or liked or disliked, the keyword extracted from the title and content summary of the page, extracted from the metadata of the specific Internet page associated with that clipping, is passed to the'Google AdMob', which processes ads in News Keeper. Keywords are used by'Google Admob' to show you the ads that work best for you.
 
-프로필에서 회원 탈퇴 버튼을 터치하여 회원탈퇴를 할 수 있습니다.
-   
-회원 탈퇴를 하면 귀하의 계정이 비활성화되고, 당사는 서버에 업로드된 귀하의 데이터를 최장 3일 동안 보관합니다. 
-   
-3일 이내 서버에 업로드된 귀하의 모든 정보가 자동으로 삭제됩니다. 비활성화된 회원의 정보는 언제든지 삭제될 수 있으며, 3일 동안의 회원 정보 보존을 보장하지 않습니다.
-   
-**단, 아직 삭제되지 않은 회원 정보는 법률의 요청이 있는 경우 3일 이상 보관할 수 있습니다.**
+The text you entered when saving the clipping is not included.
 
-> **단말기에만 저장된 모든 정보 삭제**
+> **Law, damage and public interest**
 
-프로필에서 "데이터 삭제" 버튼을 터치하여 공유 상태인 스크랩을 제외한 모든 데이터를 삭제할 수 있습니다.
-   
-**해당 방법으로 공유 상태인 스크랩은 삭제할 수 없습니다.**
+Even if there is anything that contradicts this Privacy Policy or the controls we may otherwise provide to you, we are committed to complying with laws, regulations, legal processes or government requests, to protect personal safety, To protect the safety or integrity of our platform (including to assist in preventing spam, abuse or malicious actors from our services, and to explain why we removed content or accounts from our services8, fraud, Preservation, use, and sharing of your personal and other safety-related information as we believe it is reasonably necessary to resolve security or technical issues, or to protect our rights or property or the rights or property of users of our services. Or you can make it public.
 
-## 6. 본 개인정보처리방침의 개정
+> **Change of affiliates and ownership**
 
-당사는 본 개인정보처리방침을 수시로 개정할 수 있습니다. 본 방침의 최신 버전이 당사에 의한 귀하의 개인 데이터 처리에 적용되며 동 방침은 https://news-keeper.joon-lab.com/privacy/us 또는 최신 버전의 News Keeper 어플리케이션에 항상 게시됩니다. 귀하는 개정된 본 방침이 시행된 후 당사의 서비스에 계속 액세스하거나 이를 이용함으로써 개정된 개인정보처리방침에 구속되는 것에 동의하게 됩니다.
+If we are involved in a bankruptcy, merger, acquisition, restructuring, or sale of assets, your personal data may be sold or transferred as part of that transaction. This Privacy Policy applies to your personal data transferred to a new business entity. In addition, we may disclose information about you to our corporate affiliates to support the operation of our services and affiliates' services, including advertising.
 
-공지 일자: 2020년 11월 23일
-적용 일자: 2020년 11월 23일
+## 5. Managing your personal information with us
+You control the personal data you share with us. You can access or correct this data at any time. You can also deactivate your account. We also provide tools to challenge, limit, or withdraw consent from you in certain cases about the use of the data you provide to News Keeper. We also enable you to move the data you have shared through our services and provide an easy way to contact us. To protect your privacy and maintain security, we take steps to verify your identity prior to allowing you access to your personal information or responding to your personal data deletion, transfer, and other related requests. Is following.
+
+> **Share and unshare clippings**
+
+When you save a clipping or activate the "Share" button on the clipping detail page (shown in a blue background), the clipping is uploaded to the server so other users can view the clipping. When the clipping is uploaded to the server, the category background color of the clipping in the clipping list changes to blue.
+
+If you disable the "Share" button (shown with a gray background) when saving a clipping, the clipping will be saved only on your device, and other users will not be able to view the clipping.
+
+If you disable the "Share" button on the detail page of a clipping (shown with a gray background), the clipping will be deleted from the server and other users will no longer be able to view the clipping. In this case, the background color of the category of the clipping in the clipping list changes from blue to drinking party. If it does not change, it has not been deleted from the server. If you continue to encounter this problem, please contact the News Keeper administrator through "Profile> Contact Us".
+
+However, if requested by law, we may store a copy of the uploaded clipping on the server.
+
+> **Change of personal information**
+
+News Keeper registers as a member only through your unique number, name, email, and photo information registered with a certification company such as Google or Kakao, and does not receive additional information. Therefore, in order to change the information, it must be changed in the manner determined by the authentication company, and the changed information is synchronized when you log in again.
+
+The channel intro text can be changed by touching "Introduce your channel" in your profile (if there is no channel intro text) or by touching the existing channel intro text.
+
+> **Withdrawal**
+
+You can cancel your membership by touching the withdrawal button on your profile.
+
+Withdrawal from membership will deactivate your account, and we will keep your data uploaded to our server for up to 3 days.
+
+All your information uploaded to the server within 3 days will be automatically deleted. Information of inactive members may be deleted at any time, and the retention of member information for 3 days is not guaranteed.
+
+**However, member information that has not yet been deleted can be kept for more than 3 days if requested by law.**
+
+> **Delete all information stored only on the terminal**
+
+You can delete all data except for shared clippings by touching the "Delete Data" button on your profile.
+
+**You cannot delete clippings that are shared in this way.**
+
+## 6. Revision of this Privacy Policy
+We may revise this Privacy Policy from time to time. The latest version of this policy applies to the processing of your personal data by us, which will always be posted at https://news-keeper.joon-lab.com/privacy/en or the latest version of the News Keeper application. You agree to be bound by the revised Privacy Policy by continuing to access or use our services after this revised policy is in force.
+
+Announcement date: November 23, 2020  
+Apply date: November 23, 2020
 `
