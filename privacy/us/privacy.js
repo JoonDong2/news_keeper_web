@@ -44,7 +44,7 @@ Your name and photo are always public, but users can use their real name or pseu
 
    * name
    * Photo
-   * 
+
 ## 3. Additional information about you we receive
 We collect certain information from third parties, including advertisers, when you use our services or other websites or mobile apps that contain our content. Like the information you share with us, we use the data below to operate our services.
 
