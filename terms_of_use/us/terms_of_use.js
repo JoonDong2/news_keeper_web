@@ -145,6 +145,8 @@ News Keeper is dedicated to providing the best products while providing clear gu
 
 We cannot predict when problems will occur with News Keeper products. Accordingly, our liability is limited to the extent permitted by applicable law, and in any case, loss of profits, profits, information or data arising from these Terms or in connection with the **News Keeper product, or loss of derivative, special, indirect, exemplary, The user is not liable for punitive or incidental damages.** This is true even if we have been advised of the possibility of such damages.
 
+**News Keeper uses your Cellular or WIFI to access the Internet. We are not responsible for the Cellular charges used to access the Internet. To prevent this, you need to use WIFI or stop using the app.**
+
 However, in spite of this, the limitation or exemption from the liability set forth above may not be permitted under applicable laws. In this case, News Keeper is liable to the extent prescribed by applicable law.
 
 > **Etc**
