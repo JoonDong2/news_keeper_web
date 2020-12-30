@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta http-equiv='refresh' content='0;url=https://www.apple.com/kr/'>
+    <!-- <meta http-equiv='refresh' content='0;url=https://www.apple.com/kr/'> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./reset.css">
@@ -108,8 +108,8 @@
 </head>
 <body>
     
-    <!-- <div class="container">
-        <div style="margin-bottom: 30px;">
+    <div class="container">
+        <!-- <div style="margin-bottom: 30px;">
             <ins class="adsbygoogle"
                 style="display:block"
                 data-ad-client="ca-pub-5801196273760006"
@@ -117,7 +117,7 @@
                 data-ad-format="auto"
                 data-full-width-responsive="true">
             </ins>
-        </div>
+        </div> -->
 
         <div id="news-list"></div>
         <ul id="news-container">
@@ -133,155 +133,155 @@
             <li>This page is a newsstand for your convenience. You can also search directly through the url box below.</li>
             <li>All articles displayed through our embedded browser are owned by the network that reported them, and we are not responsible for this regard.</li>
         </ul>
-    </div> -->
+    </div>
     <script>
-// var news_items = [[{
-//   url: "https://abcnews.go.com/",
-//   src: "./images/us/0/abc.png",
-//   type: "item"
-// }, {
-//   url: "https://www.cbsnews.com/",
-//   src: "./images/us/0/cbs.png",
-//   type: "item"
-// }, {
-//   url: "https://www.nbcnews.com/",
-//   src: "./images/us/0/nbc.png",
-//   type: "item"
-// }, {
-//   url: "https://www.msnbc.com/",
-//   src: "./images/us/0/msnbc.png",
-//   type: "item"
-// }, {
-//   url: "https://edition.cnn.com/",
-//   src: "./images/us/0/cnn.png",
-//   type: "item"
-// }, {
-//   url: "https://www.foxnews.com/",
-//   src: "./images/us/0/fox.png",
-//   type: "item"
-// }], [{
-//   url: "https://www.wsj.com/",
-//   src: "./images/us/1/wsj.png",
-//   type: "item"
-// }, {
-//   url: "https://www.nytimes.com/",
-//   src: "./images/us/1/nyt.png",
-//   type: "item"
-// }, {
-//   url: "https://www.washingtonpost.com/",
-//   src: "./images/us/1/wp.png",
-//   type: "item"
-// }, {
-//   url: "https://www.washingtontimes.com/",
-//   src: "./images/us/1/wt.png",
-//   type: "item"
-// }, {
-//   url: "https://www.usatoday.com/",
-//   src: "./images/us/1/usa_today.png",
-//   type: "item"
-// }, {
-//   url: "https://www.economist.com/",
-//   src: "./images/us/1/economist.png",
-//   type: "item"
-// }, {
-//   url: "https://www.sfchronicle.com/",
-//   src: "./images/us/1/sfc.png",
-//   type: "item"
-// }, {
-//   url: "https://www.chicagotribune.com/",
-//   src: "./images/us/1/ct.png",
-//   type: "item"
-// }, {
-//   url: "https://chicago.suntimes.com/",
-//   src: "./images/us/1/cst.png",
-//   type: "item"
-// }, {
-//   url: "https://www.seattlepi.com/",
-//   src: "./images/us/1/spi.png",
-//   type: "item"
-// }, {
-//   url: "https://www.politico.com/",
-//   src: "./images/us/1/politico.png",
-//   type: "item"
-// }, {
-//   url: "https://www.theonion.com/",
-//   src: "./images/us/1/onion.png",
-//   type: "item"
-// }, {
-//   url: "https://www.deseret.com/",
-//   src: "./images/us/1/deseret.png",
-//   type: "item"
-// }, {
-//   url: "https://www.huffpost.com/",
-//   src: "./images/us/1/huff_post.png",
-//   type: "item"
-// }], [{
-//   url: "https://forbes.com/",
-//   src: "./images/us/2/forbes.png",
-//   type: "item"
-// }, {
-//   url: "https://time.com/",
-//   src: "./images/us/2/time.png",
-//   type: "item"
-// }, {
-//   url: "https://www.newyorker.com/",
-//   src: "./images/us/2/the_new_yorker.png",
-//   type: "item"
-// }, {
-//   url: "https://fortune.com/",
-//   src: "./images/us/2/fortune.png",
-//   type: "item"
-// }, {
-//   url: "https://www.cbssports.com/",
-//   src: "./images/us/2/cbs.png",
-//   type: "item"
-// }, {
-//   url: "https://www.si.com/",
-//   src: "./images/us/2/si.png",
-//   type: "item"
-// }, {
-//   url: "https://www.espn.com/",
-//   src: "./images/us/2/espn.png",
-//   type: "item"
-// }, {
-//   url: "https://www.vanityfair.com/",
-//   src: "./images/us/2/vanity_fair.png",
-//   type: "item"
-// }]];
-// var navbar = document.getElementById("navbar");
-// var menu_items = document.querySelectorAll(".navbar > a");
-// var news_container = document.getElementById("news-container");
-// var news_list = document.getElementById("news-list");
-// var index = Number(location.href.split("?i=")[1]) || 0;
-// menu_items[index].classList.add("active");
-// news_items[index].forEach(function (item) {
-//   if (item.type === "item") {
-//     news_list.style = "display:none;";
-//     var li = document.createElement('li');
-//     li.innerHTML = "<a href=\"".concat(item.url, "\"><img class=\"news-item\" src=\"").concat(item.src, "\"/></a>");
-//     news_container.appendChild(li);
-//   } else {
-//     // type:array
-//     news_container.style = "display: none;";
-//     var container = document.createElement('div');
-//     container.style="margin-bottom: 20px;"
-//     var list = document.createElement('div');
-//     list.classList.add("news-list");
-//     var name = document.createElement('div');
-//     name.style = "margin-bottom: 7.5px; margin-left: 17pt; font-weight: bold; color: #333;";
-//     name.innerHTML = item.name;
-//     container.appendChild(name);
-//     item.items.forEach(function (inner_item) {
-//       var li = document.createElement('li');
-//       li.innerHTML = "<a href=\"".concat(inner_item.url, "\"><img class=\"news-item\" src=\"").concat(inner_item.src, "\"/></a>");
-//       list.appendChild(li);
-//     });
-//     container.appendChild(list);
-//     news_list.appendChild(container);
-//   }
-// });
-// var offsetIndex = index - 1 < 0 ? 0 : index - 1;
-// navbar.scrollLeft = offsetIndex * 65;
+var news_items = [[{
+  url: "https://abcnews.go.com/",
+  src: "./images/us/0/abc.png",
+  type: "item"
+}, {
+  url: "https://www.cbsnews.com/",
+  src: "./images/us/0/cbs.png",
+  type: "item"
+}, {
+  url: "https://www.nbcnews.com/",
+  src: "./images/us/0/nbc.png",
+  type: "item"
+}, {
+  url: "https://www.msnbc.com/",
+  src: "./images/us/0/msnbc.png",
+  type: "item"
+}, {
+  url: "https://edition.cnn.com/",
+  src: "./images/us/0/cnn.png",
+  type: "item"
+}, {
+  url: "https://www.foxnews.com/",
+  src: "./images/us/0/fox.png",
+  type: "item"
+}], [{
+  url: "https://www.wsj.com/",
+  src: "./images/us/1/wsj.png",
+  type: "item"
+}, {
+  url: "https://www.nytimes.com/",
+  src: "./images/us/1/nyt.png",
+  type: "item"
+}, {
+  url: "https://www.washingtonpost.com/",
+  src: "./images/us/1/wp.png",
+  type: "item"
+}, {
+  url: "https://www.washingtontimes.com/",
+  src: "./images/us/1/wt.png",
+  type: "item"
+}, {
+  url: "https://www.usatoday.com/",
+  src: "./images/us/1/usa_today.png",
+  type: "item"
+}, {
+  url: "https://www.economist.com/",
+  src: "./images/us/1/economist.png",
+  type: "item"
+}, {
+  url: "https://www.sfchronicle.com/",
+  src: "./images/us/1/sfc.png",
+  type: "item"
+}, {
+  url: "https://www.chicagotribune.com/",
+  src: "./images/us/1/ct.png",
+  type: "item"
+}, {
+  url: "https://chicago.suntimes.com/",
+  src: "./images/us/1/cst.png",
+  type: "item"
+}, {
+  url: "https://www.seattlepi.com/",
+  src: "./images/us/1/spi.png",
+  type: "item"
+}, {
+  url: "https://www.politico.com/",
+  src: "./images/us/1/politico.png",
+  type: "item"
+}, {
+  url: "https://www.theonion.com/",
+  src: "./images/us/1/onion.png",
+  type: "item"
+}, {
+  url: "https://www.deseret.com/",
+  src: "./images/us/1/deseret.png",
+  type: "item"
+}, {
+  url: "https://www.huffpost.com/",
+  src: "./images/us/1/huff_post.png",
+  type: "item"
+}], [{
+  url: "https://forbes.com/",
+  src: "./images/us/2/forbes.png",
+  type: "item"
+}, {
+  url: "https://time.com/",
+  src: "./images/us/2/time.png",
+  type: "item"
+}, {
+  url: "https://www.newyorker.com/",
+  src: "./images/us/2/the_new_yorker.png",
+  type: "item"
+}, {
+  url: "https://fortune.com/",
+  src: "./images/us/2/fortune.png",
+  type: "item"
+}, {
+  url: "https://www.cbssports.com/",
+  src: "./images/us/2/cbs.png",
+  type: "item"
+}, {
+  url: "https://www.si.com/",
+  src: "./images/us/2/si.png",
+  type: "item"
+}, {
+  url: "https://www.espn.com/",
+  src: "./images/us/2/espn.png",
+  type: "item"
+}, {
+  url: "https://www.vanityfair.com/",
+  src: "./images/us/2/vanity_fair.png",
+  type: "item"
+}]];
+var navbar = document.getElementById("navbar");
+var menu_items = document.querySelectorAll(".navbar > a");
+var news_container = document.getElementById("news-container");
+var news_list = document.getElementById("news-list");
+var index = Number(location.href.split("?i=")[1]) || 0;
+menu_items[index].classList.add("active");
+news_items[index].forEach(function (item) {
+  if (item.type === "item") {
+    news_list.style = "display:none;";
+    var li = document.createElement('li');
+    li.innerHTML = "<a href=\"".concat(item.url, "\"><img class=\"news-item\" src=\"").concat(item.src, "\"/></a>");
+    news_container.appendChild(li);
+  } else {
+    // type:array
+    news_container.style = "display: none;";
+    var container = document.createElement('div');
+    container.style="margin-bottom: 20px;"
+    var list = document.createElement('div');
+    list.classList.add("news-list");
+    var name = document.createElement('div');
+    name.style = "margin-bottom: 7.5px; margin-left: 17pt; font-weight: bold; color: #333;";
+    name.innerHTML = item.name;
+    container.appendChild(name);
+    item.items.forEach(function (inner_item) {
+      var li = document.createElement('li');
+      li.innerHTML = "<a href=\"".concat(inner_item.url, "\"><img class=\"news-item\" src=\"").concat(inner_item.src, "\"/></a>");
+      list.appendChild(li);
+    });
+    container.appendChild(list);
+    news_list.appendChild(container);
+  }
+});
+var offsetIndex = index - 1 < 0 ? 0 : index - 1;
+navbar.scrollLeft = offsetIndex * 65;
     </script>
     <script>
         // (adsbygoogle = window.adsbygoogle || []).push({});
