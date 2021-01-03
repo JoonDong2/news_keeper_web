@@ -34,9 +34,9 @@
         }
         .title {
             font-size: 30pt;
+            line-height: 30pt;
             font-weight: bold;
             color: #ff7f00;
-            margin-bottom: 5pt;
         }
         .sub_title {
             font-size: 20pt;
@@ -58,6 +58,16 @@
             flex-direction: row;
             margin-bottom: 10pt;
         }
+        @media ( max-width: 500px ) {
+            .img_container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                flex-direction: column;
+                margin-bottom: 10pt;
+            }
+        }
         .contanct_container {
             display: flex;
             justify-content: center;
@@ -67,7 +77,7 @@
 </head>
 <body>
     <div class="header">
-        <img width="75" style="margin-right: 10pt;" src="../images/logo.svg"/>
+        <img width="75" style="margin-right: 10pt; margin-bottom: 5pt;" src="../images/logo.svg"/>
         <div class="title_container">
             <div class="title">News Keeper</div>
             <div class="sub_title">Cliping & Sharing Articles</div>
@@ -81,7 +91,8 @@
 
 
     <div class="img_container">
-        <img width="200" style="margin-right: 10pt;" src="../images/apple_store.svg"/>
+        <a href="https://apps.apple.com/us/app/id1541146594"><img width="200" src="../images/apple_store.svg"/></a>
+        <div style="width: 10pt; height: 5pt;"></div>
         <img width="200" src="../images/play_store.svg"/>
     </div>
 
