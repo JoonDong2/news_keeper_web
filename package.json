@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/JoonDong2/news_keeper_web/issues"
   },
-  "homepage": "https://github.com/JoonDong2/news_keeper_web#readme"
+  "homepage": "https://github.com/JoonDong2/news_keeper_web#readme",
+  "dependencies": {}
 }

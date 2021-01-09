@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Keeper</title>
+
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            background-color: black;
+        }
+        *:focus { outline:none !important; }
+        .iphone-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 1px;
+        }
+        .swiper-item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-button-prev {
+            color: #aaa; 
+        }
+        .swiper-button-next {
+            color: #aaa; 
+        }
+    </style>
+</head>
+<body onload="onload()">
+    <div id="iphone-container" class="iphone-container">
+        <div style="flex:1; height: 100%; background-color: black; z-index: 10;"></div>
+        <img id="iphone" style="z-index: 10; height: 1px;" src="./images/app/iphone.png"/>
+        <div style="flex:1; height: 100%; background-color: black; z-index: 10;"></div>
+    </div>
+
+    <!-- Slider main container -->
+    <div id="swiper-container" class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="swiper-item">
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/1.png"/>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="swiper-item">
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/2.png"/>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-item">
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/3.png"/>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-item">
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/4.png"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <script>
+        function checkMobile(){
+            var varUA = navigator.userAgent.toLowerCase();
+            if ( varUA.indexOf('android') > -1) {
+                return "android";
+            } else if ( varUA.indexOf("iphone") > -1 || varUA.indexOf("ipad") > -1 || varUA.indexOf("ipod") > -1 ) {
+                return "ios";
+            } else {
+                return "other";
+            }
+        }
+
+        function onload() {
+            console.log(checkMobile());
+
+            var swiper = new Swiper('.swiper-container', {
+                spaceBetween: 30,
+                centeredSlides: true,
+                on: {
+                    slideChange: function(swiper) {
+                        console.log(swiper.activeIndex)
+                    }
+                }
+            });
+
+            document.getElementById("swiper-container").style.height = String(window.innerHeight * 0.66) + "px";
+            document.getElementById("iphone-container").style.height = String(window.innerHeight * 0.66) + "px";
+            document.getElementById("iphone").style.height = String(window.innerHeight * 0.6) + "px";
+
+            const swiper_images = document.getElementsByClassName("swiper-image")
+            for (var i=0; i<swiper_images.length; i++) {
+                swiper_images[i].style.height = String(window.innerHeight * 0.465) + "px";
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
