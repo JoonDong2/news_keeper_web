@@ -178,14 +178,26 @@
     </div>
 
     <script>
+        let store_touched = false;
+
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
         function touch_appstore() {
+            if(store_touched) {
+                return
+            }
+
+            store_touched = true;
             gtag('event', 'touch_app_store');
         }
 
         function touch_playstore() {
+            if(store_touched) {
+                return
+            }
+
+            store_touched = true;
             gtag('event', 'touch_play_store');
         }
 
