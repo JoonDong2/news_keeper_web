@@ -221,7 +221,6 @@
                 },
                 on: {
                     slideChange: function(swiper) {
-                        console.log(swiper.activeIndex)
                         const description = descriptions[swiper.activeIndex];
                         document.getElementById("title").innerHTML = description.title;
                         document.getElementById("desc").innerHTML = description.desc;
