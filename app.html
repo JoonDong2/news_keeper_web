@@ -167,17 +167,28 @@
         </div>
     
         <div class="store-container">
-            <a id="appstore" style="display: none;" href="https://apps.apple.com/kr/app/id1541146594">
+            <a id="appstore" onclick="touch_appstore()" style="display: none;" href="https://apps.apple.com/kr/app/id1541146594">
                 <img id="appstore-image" src="./images/app/appstore.png" />
             </a>
     
-            <a id="playstore" style="display: none;" href="market://details?id=com.joondong.news_keeper">
+            <a id="playstore" onclick="touch_playstore()" style="display: none;" href="market://details?id=com.joondong.news_keeper">
                 <img id="playstore-image" src="./images/app/playstore.svg" />
             </a>
         </div>
     </div>
 
     <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        function touch_appstore() {
+            gtag('event', 'touch_app_store');
+        }
+
+        function touch_playstore() {
+            gtag('event', 'touch_play_store');
+        }
+
         function checkMobile(){
             var varUA = navigator.userAgent.toLowerCase();
             if ( varUA.indexOf('android') > -1) {
