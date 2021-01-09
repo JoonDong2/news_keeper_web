@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         body {
-            background-color: black;
+            background-color: #000;
         }
         *:focus { outline:none !important; }
         .iphone-container {
@@ -40,20 +40,29 @@
         .swiper-button-next {
             color: #aaa; 
         }
+
+        .store-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .store {
+            width: 200px;
+        }
     </style>
 </head>
 <body onload="onload()">
     <div id="iphone-container" class="iphone-container">
-        <div style="flex:1; height: 100%; background-color: black; z-index: 10;"></div>
+        <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
         <div style="position:relative; z-index: 10;">
-            <img id="iphone" style="z-index: 5;height: 1px;" src="./images/app/iphone.png"/>
-            <div style="z-index: 3; position: absolute; top: 0; left: 0; width: 8px; height: 40px; background-color: green;"></div>
-            <div style="z-index: 3; position: absolute; top: 0; right: 0; width: 8px; height: 40px; background-color: green;"></div>
-            <div style="z-index: 3; position: absolute; bottom: 0; left: 0; width: 8px; height: 40px; background-color: green;"></div>
-            <div style="z-index: 3; position: absolute; bottom: 0; right: 0; width: 8px; height: 40px; background-color: green;"></div>
-            
+            <img id="iphone" style="position: relative; z-index: 5; height: 1px;" src="./images/app/iphone.png"/>
+            <div style="z-index: 3; position: absolute; top: 0; left: 0; width: 8px; height: 40px; background-color: #000;"></div>
+            <div style="z-index: 3; position: absolute; top: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+            <div style="z-index: 3; position: absolute; bottom: 0; left: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+            <div style="z-index: 3; position: absolute; bottom: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
         </div>
-        <div style="flex:1; height: 100%; background-color: black; z-index: 10;"></div>
+        <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
     </div>
 
     <!-- Slider main container -->
@@ -84,10 +93,32 @@
                     <img class="swiper-image" style="height: 350px" src="./images/app/kr/4.png"/>
                 </div>
             </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-item">
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/5.png"/>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-item">
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/6.png"/>
+                </div>
+            </div>
         </div>
 
         <!-- Add Pagination -->
         <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <div class="store-container">
+        <a id="appstore" style="display: none;">
+            <img class="store" src="./images/app/appstore.png" />
+        </a>
+
+        <a id="playstore" style="display: none;">
+            <img class="store" src="./images/app/playstore.svg" />
+        </a>
     </div>
 
     <script>
@@ -103,7 +134,14 @@
         }
 
         function onload() {
-            console.log(checkMobile());
+            const mobile = checkMobile()
+
+            if(mobile === "android") {
+                document.getElementById("playstore").style.display = "block";
+            } 
+            else if(mobile === "ios") {
+                document.getElementById("appstore").style.display = "block";
+            }
 
             var swiper = new Swiper('.swiper-container', {
                 spaceBetween: 30,
@@ -115,14 +153,13 @@
                 }
             });
 
-            document.getElementById("swiper-container").style.height = `${window.innerHeight * 0.66}px`;
-            document.getElementById("iphone-container").style.height = `${window.innerHeight * 0.66}px`;
-            document.getElementById("iphone").style.height = `${window.innerHeight * 0.6}px`;
+            document.getElementById("swiper-container").style.height = `${window.innerHeight * 0.73}px`;
+            document.getElementById("iphone-container").style.height = `${window.innerHeight * 0.73}px`;
+            document.getElementById("iphone").style.height = `${window.innerHeight * 0.67}px`;
 
             const swiper_images = document.getElementsByClassName("swiper-image")
             for (var i=0; i<swiper_images.length; i++) {
-                swiper_images[i].style.height = `${window.innerHeight * 0.57}px`;
-                swiper_images[i].style.borderRadius = "20px";
+                swiper_images[i].style.height = `${window.innerHeight * 0.63}px`;
             }
         }
     </script>
