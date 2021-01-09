@@ -45,7 +45,14 @@
 <body onload="onload()">
     <div id="iphone-container" class="iphone-container">
         <div style="flex:1; height: 100%; background-color: black; z-index: 10;"></div>
-        <img id="iphone" style="z-index: 10; height: 1px;" src="./images/app/iphone.png"/>
+        <div style="position:relative; z-index: 10;">
+            <img id="iphone" style="z-index: 5;height: 1px;" src="./images/app/iphone.png"/>
+            <div style="z-index: 3; position: absolute; top: 0; left: 0; width: 8px; height: 40px; background-color: green;"></div>
+            <div style="z-index: 3; position: absolute; top: 0; right: 0; width: 8px; height: 40px; background-color: green;"></div>
+            <div style="z-index: 3; position: absolute; bottom: 0; left: 0; width: 8px; height: 40px; background-color: green;"></div>
+            <div style="z-index: 3; position: absolute; bottom: 0; right: 0; width: 8px; height: 40px; background-color: green;"></div>
+            
+        </div>
         <div style="flex:1; height: 100%; background-color: black; z-index: 10;"></div>
     </div>
 
@@ -108,13 +115,14 @@
                 }
             });
 
-            document.getElementById("swiper-container").style.height = String(window.innerHeight * 0.66) + "px";
-            document.getElementById("iphone-container").style.height = String(window.innerHeight * 0.66) + "px";
-            document.getElementById("iphone").style.height = String(window.innerHeight * 0.6) + "px";
+            document.getElementById("swiper-container").style.height = `${window.innerHeight * 0.66}px`;
+            document.getElementById("iphone-container").style.height = `${window.innerHeight * 0.66}px`;
+            document.getElementById("iphone").style.height = `${window.innerHeight * 0.6}px`;
 
             const swiper_images = document.getElementsByClassName("swiper-image")
             for (var i=0; i<swiper_images.length; i++) {
-                swiper_images[i].style.height = String(window.innerHeight * 0.465) + "px";
+                swiper_images[i].style.height = `${window.innerHeight * 0.57}px`;
+                swiper_images[i].style.borderRadius = "20px";
             }
         }
     </script>
