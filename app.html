@@ -7,9 +7,15 @@
 
     <link rel="stylesheet" type="text/css" href="./reset.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap" rel="stylesheet">
+    
     <style>
         body {
             background-color: #000;
+        }
+        a {
+            -webkit-tap-highlight-color: transparent;
         }
         *:focus { outline:none !important; }
         .iphone-container {
@@ -50,59 +56,88 @@
         .store {
             width: 200px;
         }
+
+        .desc-container {
+            margin-top: 15px;
+        }
+        .title {
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-family: 'Do Hyeon', sans-serif;
+        }
+        .desc {
+            width: 100%;
+            text-align: center;
+            color: #eaeaea;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: 'Jua', sans-serif;
+        }
     </style>
 </head>
 <body onload="onload()">
-    <div id="iphone-container" class="iphone-container">
-        <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
-        <div style="position:relative; z-index: 10;">
-            <img id="iphone" style="position: relative; z-index: 5; height: 1px;" src="./images/app/iphone.png"/>
-            <div style="z-index: 3; position: absolute; top: 0; left: 0; width: 8px; height: 40px; background-color: #000;"></div>
-            <div style="z-index: 3; position: absolute; top: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
-            <div style="z-index: 3; position: absolute; bottom: 0; left: 0; width: 8px; height: 40px; background-color: #000;"> </div>
-            <div style="z-index: 3; position: absolute; bottom: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
-        </div>
-        <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
+    <div class="desc-container">
+        <p id="title" class="title">직관적인 스크래핑</p>
+        <p id="desc" class="desc">스크랩한 기사를 한 눈에<br>확인할 수 있습니다.</p>
     </div>
+
+    
 
     <!-- Slider main container -->
     <div id="swiper-container" class="swiper-container">
+
+        <!-- IPhone Area -->
+        <div id="iphone-container" class="iphone-container">
+            <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
+            <div style="position:relative; z-index: 10;">
+                <img id="iphone" style="position: relative; z-index: 5; height: 1px;" src="./images/app/iphone.png"/>
+                <div style="z-index: 3; position: absolute; top: 0; left: 0; width: 8px; height: 40px; background-color: #000;"></div>
+                <div style="z-index: 3; position: absolute; top: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+                <div style="z-index: 3; position: absolute; bottom: 0; left: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+                <div style="z-index: 3; position: absolute; bottom: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+            </div>
+            <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
+        </div>
+
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
                 <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/1.png"/>
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/1.jpg"/>
                 </div>
             </div>
             
             <div class="swiper-slide">
                 <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/2.png"/>
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/2.jpg"/>
                 </div>
             </div>
 
             <div class="swiper-slide">
                 <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/3.png"/>
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/3.jpg"/>
                 </div>
             </div>
 
             <div class="swiper-slide">
                 <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/4.png"/>
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/4.jpg"/>
                 </div>
             </div>
 
             <div class="swiper-slide">
                 <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/5.png"/>
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/5.jpg"/>
                 </div>
             </div>
 
             <div class="swiper-slide">
                 <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/6.png"/>
+                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/6.jpg"/>
                 </div>
             </div>
         </div>
@@ -133,6 +168,26 @@
             }
         }
 
+        var descriptions = [{
+            title: "스크랩을 한 눈에",
+            desc: "스크랩한 기사를 한 눈에<br>확인할 수 있습니다."
+        }, {
+            title: "나만의 언론사 모음",
+            desc: "자주 찾는 언론사를<br>즐겨찾기에 추가해 보세요."
+        }, {
+            title: "모든 정보를 한 눈에",
+            desc: "내가 활동한 내용을<br>한 눈에 확인할 수 있어요."
+        }, {
+            title: "구독/좋아요/싫어요",
+            desc: "나와 마음이 맞는<br>사용자를 구독해 보세요."
+        }, {
+            title: "타인의 생각들",
+            desc: "다른 사용자가 공유한<br>기사와 메모를 볼 수 있어요."
+        }, {
+            title: "채팅? 댓글입니다.",
+            desc: "다른 사용자가 공유한<br>스크랩에 댓글을 남겨 보세요."
+        }]
+
         function onload() {
             const mobile = checkMobile()
 
@@ -149,17 +204,20 @@
                 on: {
                     slideChange: function(swiper) {
                         console.log(swiper.activeIndex)
+                        const description = descriptions[swiper.activeIndex];
+                        document.getElementById("title").innerHTML = description.title;
+                        document.getElementById("desc").innerHTML = description.desc;
                     }
                 }
             });
 
-            document.getElementById("swiper-container").style.height = `${window.innerHeight * 0.73}px`;
-            document.getElementById("iphone-container").style.height = `${window.innerHeight * 0.73}px`;
-            document.getElementById("iphone").style.height = `${window.innerHeight * 0.67}px`;
+            document.getElementById("swiper-container").style.height = `${window.innerHeight * 0.7}px`;
+            document.getElementById("iphone-container").style.height = `${window.innerHeight * 0.7}px`;
+            document.getElementById("iphone").style.height = `${window.innerHeight * 0.65}px`;
 
             const swiper_images = document.getElementsByClassName("swiper-image")
             for (var i=0; i<swiper_images.length; i++) {
-                swiper_images[i].style.height = `${window.innerHeight * 0.63}px`;
+                swiper_images[i].style.height = `${window.innerHeight * 0.61}px`;
             }
         }
     </script>
