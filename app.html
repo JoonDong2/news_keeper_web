@@ -84,18 +84,19 @@
         .title {
             width: 100%;
             text-align: center;
-            color: #fff;
             margin-bottom: 10px;
+            color: #ffdad9;
             font-size: 32px;
             font-family: 'Do Hyeon', sans-serif;
         }
         .desc {
             width: 100%;
             text-align: center;
-            color: #eaeaea;
+            color: #fafafa;
             font-size: 20px;
             line-height: 24px;
             font-family: 'Jua', sans-serif;
+            font-weight: 300;
         }
     </style>
 </head>
@@ -221,22 +222,28 @@
         
         var descriptions = [{
             title: "스크랩을 한 눈에",
-            desc: "스크랩한 기사를 한 눈에<br>확인할 수 있습니다."
+            desc: "스크랩한 기사를 한 눈에<br>확인할 수 있습니다.",
+            color: "#ffdad9"
         }, {
             title: "나만의 언론사 모음",
-            desc: "자주 찾는 언론사를<br>즐겨찾기에 추가해 보세요."
+            desc: "자주 찾는 언론사를<br>즐겨찾기에 추가해 보세요.",
+            color: "#ffde8c"
         }, {
             title: "모든 정보를 한 눈에",
-            desc: "내가 활동한 내용을<br>한 눈에 확인할 수 있어요."
+            desc: "내가 활동한 내용을<br>한 눈에 확인할 수 있어요.",
+            color: "#fffccf"
         }, {
             title: "구독/좋아요/싫어요",
-            desc: "나와 마음이 맞는<br>사용자를 구독해 보세요."
+            desc: "나와 마음이 맞는<br>사용자를 구독해 보세요.",
+            color: "#e3ffe7"
         }, {
             title: "타인의 생각들",
-            desc: "다른 사용자가 공유한<br>기사와 메모를 볼 수 있어요."
+            desc: "다른 사용자가 공유한<br>기사와 메모를 볼 수 있어요.",
+            color: "#e3eaff"
         }, {
             title: "채팅? 댓글입니다.",
-            desc: "다른 사용자가 공유한<br>스크랩에 댓글을 남겨 보세요."
+            desc: "다른 사용자가 공유한<br>스크랩에 댓글을 남겨 보세요.",
+            color: "#f5e3fc"
         }]
 
         function onload() {
@@ -263,7 +270,11 @@
                 on: {
                     slideChange: function(swiper) {
                         const description = descriptions[swiper.activeIndex];
-                        document.getElementById("title").innerHTML = description.title;
+
+                        const title = document.getElementById("title");
+                        title.innerHTML = description.title;
+                        title.style.color = description.color;
+
                         document.getElementById("desc").innerHTML = description.desc;
                     }
                 }
