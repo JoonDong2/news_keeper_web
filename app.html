@@ -18,6 +18,19 @@
             -webkit-tap-highlight-color: transparent;
         }
         *:focus { outline:none !important; }
+
+        .contianer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
         .iphone-container {
             position: absolute;
             top: 0;
@@ -53,9 +66,6 @@
             justify-content: center;
             align-items: center;
         }
-        .store {
-            width: 200px;
-        }
 
         .desc-container {
             margin-top: 25px;
@@ -79,81 +89,81 @@
     </style>
 </head>
 <body onload="onload()">
-    <div class="desc-container">
-        <p id="title" class="title">직관적인 스크래핑</p>
-        <p id="desc" class="desc">스크랩한 기사를 한 눈에<br>확인할 수 있습니다.</p>
-    </div>
-
+    <div class="container">
+        <div class="desc-container">
+            <p id="title" class="title">직관적인 스크래핑</p>
+            <p id="desc" class="desc">스크랩한 기사를 한 눈에<br>확인할 수 있습니다.</p>
+        </div>
+        
+        <!-- Slider main container -->
+        <div id="swiper-container" class="swiper-container">
     
-
-    <!-- Slider main container -->
-    <div id="swiper-container" class="swiper-container">
-
-        <!-- IPhone Area -->
-        <div id="iphone-container" class="iphone-container">
-            <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
-            <div style="position:relative; z-index: 10;">
-                <img id="iphone" style="position: relative; z-index: 5; height: 1px;" src="./images/app/iphone.png"/>
-                <div style="z-index: 3; position: absolute; top: 0; left: 0; width: 8px; height: 40px; background-color: #000;"></div>
-                <div style="z-index: 3; position: absolute; top: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
-                <div style="z-index: 3; position: absolute; bottom: 0; left: 0; width: 8px; height: 40px; background-color: #000;"> </div>
-                <div style="z-index: 3; position: absolute; bottom: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+            <!-- IPhone Area -->
+            <div id="iphone-container" class="iphone-container">
+                <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
+                <div style="position:relative; z-index: 10;">
+                    <img id="iphone" style="position: relative; z-index: 5; height: 375px;" src="./images/app/iphone.png"/>
+                    <div style="z-index: 3; position: absolute; top: 0; left: 0; width: 8px; height: 40px; background-color: #000;"></div>
+                    <div style="z-index: 3; position: absolute; top: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+                    <div style="z-index: 3; position: absolute; bottom: 0; left: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+                    <div style="z-index: 3; position: absolute; bottom: 0; right: 0; width: 8px; height: 40px; background-color: #000;"> </div>
+                </div>
+                <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
             </div>
-            <div style="flex:1; height: 100%; background-color: #000; z-index: 10;"></div>
+    
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="swiper-item">
+                        <img class="swiper-image" style="height: 350px" src="./images/app/kr/1.jpg"/>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="swiper-item">
+                        <img class="swiper-image" style="height: 350px" src="./images/app/kr/2.jpg"/>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide">
+                    <div class="swiper-item">
+                        <img class="swiper-image" style="height: 350px" src="./images/app/kr/3.jpg"/>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide">
+                    <div class="swiper-item">
+                        <img class="swiper-image" style="height: 350px" src="./images/app/kr/4.jpg"/>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide">
+                    <div class="swiper-item">
+                        <img class="swiper-image" style="height: 350px" src="./images/app/kr/5.jpg"/>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide">
+                    <div class="swiper-item">
+                        <img class="swiper-image" style="height: 350px" src="./images/app/kr/6.jpg"/>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
         </div>
-
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/1.jpg"/>
-                </div>
-            </div>
-            
-            <div class="swiper-slide">
-                <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/2.jpg"/>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/3.jpg"/>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/4.jpg"/>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/5.jpg"/>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="swiper-item">
-                    <img class="swiper-image" style="height: 350px" src="./images/app/kr/6.jpg"/>
-                </div>
-            </div>
+    
+        <div class="store-container">
+            <a id="appstore" style="display: none;" href="https://apps.apple.com/kr/app/id1541146594">
+                <img id="appstore-image" src="./images/app/appstore.png" />
+            </a>
+    
+            <a id="playstore" style="display: none;" href="market://details?id=com.joondong.news_keeper">
+                <img id="playstore-image" src="./images/app/playstore.svg" />
+            </a>
         </div>
-
-        <!-- Add Pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
-    </div>
-
-    <div class="store-container">
-        <a id="appstore" style="display: none;" href="https://apps.apple.com/kr/app/id1541146594">
-            <img class="store" src="./images/app/appstore.png" />
-        </a>
-
-        <a id="playstore" style="display: none;" href="market://details?id=com.joondong.news_keeper">
-            <img class="store" src="./images/app/playstore.svg" />
-        </a>
     </div>
 
     <script>
@@ -193,9 +203,11 @@
 
             if(mobile === "android") {
                 document.getElementById("playstore").style.display = "block";
+                document.getElementById("playstore-image").style.height = `${window.innerHeight * 0.085}px`;
             } 
             else if(mobile === "ios") {
                 document.getElementById("appstore").style.display = "block";
+                document.getElementById("appstore-image").style.height = `${window.innerHeight * 0.085}px`;
             }
 
             var swiper = new Swiper('.swiper-container', {
@@ -210,6 +222,9 @@
                     }
                 }
             });
+
+            document.getElementById("title").style.fontSize = `${window.innerHeight * 0.05}px`;
+            document.getElementById("desc").style.fontSize = `${window.innerHeight * 0.03}px`;
 
             document.getElementById("swiper-container").style.height = `${window.innerHeight * 0.7}px`;
             document.getElementById("iphone-container").style.height = `${window.innerHeight * 0.7}px`;
