@@ -96,7 +96,13 @@
             font-size: 20px;
             line-height: 24px;
             font-family: 'Jua', sans-serif;
-            font-weight: 300;
+        }
+
+        .other-desc {
+            color: #fafafa; 
+            display: none; 
+            margin-top: 15px;
+            font-family: 'Jua', sans-serif;
         }
     </style>
 </head>
@@ -178,21 +184,26 @@
             <a id="appstore" onclick="touch_appstore()" style="display: none;" href="https://apps.apple.com/kr/app/id1541146594">
                 <img id="appstore-image" src="./images/app/appstore.png" />
             </a>
-    
+
+            <div id="dummy" style="width: 15px; height: 15px; display: none;"></div>
+
             <a id="playstore" onclick="touch_playstore()" style="display: none;" href="market://details?id=com.joondong.news_keeper">
                 <img id="playstore-image" src="./images/app/playstore.svg" />
             </a>
         </div>
+
+        <p id="other_desc" class="other-desc">모바일에서는 스토어로 바로 연결됩니다.</p>
     </div>
 
     <script>
         let store_touched = false;
+        let isOther = false;
 
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
         function touch_appstore() {
-            if(store_touched) {
+            if(store_touched || isOther) {
                 return
             }
 
@@ -201,7 +212,7 @@
         }
 
         function touch_playstore() {
-            if(store_touched) {
+            if(store_touched || isOther) {
                 return
             }
 
@@ -256,6 +267,21 @@
             else if(mobile === "ios") {
                 document.getElementById("appstore").style.display = "block";
                 document.getElementById("appstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
+            }
+            else {
+                isOther = true
+                const playstore = document.getElementById("playstore");
+                playstore.style.display = "block";
+                playstore.style.pointerEvents = "none";
+                document.getElementById("playstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
+                
+                const appstore = document.getElementById("appstore");
+                appstore.style.display = "block";
+                appstore.style.pointerEvents = "none";
+                document.getElementById("appstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
+
+                document.getElementById("dummy").style.display = "block";
+                document.getElementById("other_desc").style.display = "block";
             }
 
             var swiper = new Swiper('.swiper-container', {
