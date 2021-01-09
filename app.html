@@ -203,11 +203,11 @@
 
             if(mobile === "android") {
                 document.getElementById("playstore").style.display = "block";
-                document.getElementById("playstore-image").style.height = `${window.innerHeight * 0.085}px`;
+                document.getElementById("playstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
             } 
             else if(mobile === "ios") {
                 document.getElementById("appstore").style.display = "block";
-                document.getElementById("appstore-image").style.height = `${window.innerHeight * 0.085}px`;
+                document.getElementById("appstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
             }
 
             var swiper = new Swiper('.swiper-container', {
