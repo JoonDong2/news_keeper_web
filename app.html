@@ -141,8 +141,9 @@
                 </div>
             </div>
     
-            <!-- Add Pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     
         <div class="store-container">
@@ -203,6 +204,10 @@
             var swiper = new Swiper('.swiper-container', {
                 spaceBetween: 30,
                 centeredSlides: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
                 on: {
                     slideChange: function(swiper) {
                         console.log(swiper.activeIndex)
